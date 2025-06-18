@@ -1,13 +1,21 @@
+const person = {
+  name: 'Rick',
+  age: 77,
+  country: 'US',
+}
 
-const samePerson = {...person};
+const samePerson = person;
 const clone1 = {...person};
 const clone2 = {...person};
 
-Object.freeze(clone1)
-Object.freeze(clone1)
 
+
+//Object.assign(samePerson, person)
+//Object.freeze(clone1)
+//Object.freeze(clone1)
+//person.name = "oussama" ;
+//console.log(person.name  , samePerson.name , clone1.name , clone2.name );
 //slice.push(person,clone1,clone2)
-
 //slice.forEhow to append ach(x =>  {
 //	console.log("constent :" , x )
 //})
