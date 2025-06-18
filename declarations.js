@@ -2,7 +2,7 @@ const escapeStr = "\`\\\/\"\'";
 const arr = [4, '2'];
 const obj = {};
 obj.str = "oussama";
-obj.num = "2002";
+obj.num = 2002;
 obj.bool = true;
 obj.undef = undefined;
 
