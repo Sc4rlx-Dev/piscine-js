@@ -1,8 +1,3 @@
-const person = {
-	name 	: 'Rick',
-	age 	: 77,
-	country : 'us',
-}
 
 const samePerson = {...person};
 const clone1 = {...person};
