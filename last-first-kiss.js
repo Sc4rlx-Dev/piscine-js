@@ -11,6 +11,6 @@ return arrORstr[lastarr]
 function kiss(arrORstr){
         const fst_elenmt = arrORstr[0];
         const lst_element = arrORstr[arrORstr.length - 1];
-        return [fst_elenmt , lst_element];
+        return [lst_element , fst_elenmt];
 }
-// console.log(last([2, 42]))
+// console.log(kiss([1, 2, 3, 4, 5, 6]))
