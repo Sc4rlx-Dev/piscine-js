@@ -11,8 +11,11 @@ const Plannets = {
 
 function dogYears(p , a) {
     // const n = (a / Plannets.earth) * 7
+    if (p == 'earth') {
+        return (parseFloat(((a / Plannets[p]) * 7 ).toFixed(2)))
+    }
     return (parseFloat(((a / Plannets.earth) * 7/ Plannets[p]).toFixed(2)))
 }
-console.log(dogYears('mercury', 2134835688))
+console.log(typeof(dogYears('earth', 1000000000)))
 
 //toFixed() , parsInt()
