@@ -5,7 +5,7 @@ function first(arrORstr){
 function last(arrORstr){
     let lastarr;
     lastarr = arrORstr.length - 1;
-return lastarr
+return arrORstr[lastarr]
 }
 
 function kiss(arrORstr){
@@ -13,3 +13,4 @@ function kiss(arrORstr){
         const lst_element = arrORstr[arrORstr.length - 1];
         return [fst_elenmt , lst_element];
 }
+// console.log(last([2, 42]))
