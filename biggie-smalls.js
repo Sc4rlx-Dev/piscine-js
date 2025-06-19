@@ -1,5 +1,5 @@
-const smalls = Number.MIN_VALUE
-const biggie = Number.MAX_VALUE
+const smalls = Infinity * -1
+const biggie = Infinity
 
 
-// console.log(smalls,biggie)
+// console.log(biggie > Infinity)
