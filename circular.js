@@ -1,0 +1,5 @@
+
+
+const circular = {
+    circular : circular,
+}
