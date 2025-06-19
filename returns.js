@@ -2,7 +2,7 @@ function id(id){
     return id;
 }
 
-function getLenght(arr){
+function getLength(arr){
     return arr.Lenght;
 }
 
