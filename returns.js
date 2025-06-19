@@ -3,6 +3,7 @@ function id(id){
 }
 
 function getLength(arr){
-    return arr.Lenght;
+    return arr.length;
 }
 
+// console.log("lenght : ", getLength([2,42]));
