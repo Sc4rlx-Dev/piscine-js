@@ -28,7 +28,7 @@
 // is.falsy = (value) => { return !is.truthy(value); };
 
 
-// const is = {};
+const is = {};
 
 is.num = (value) => typeof value === 'number';
 is.nan = (value) => Number.isNaN(value);
@@ -44,4 +44,4 @@ is.falsy = (value) => !value;
 // is.truthy = (value) => !(value === false || value == 0 || value == '' || value == null || is.undef(value) === true || is.nan(value) === true);
 // is.falsy = (value) => !is.truthy(value);
 
-// console.log(is.num(454));
+console.log(is.truthy(false));
