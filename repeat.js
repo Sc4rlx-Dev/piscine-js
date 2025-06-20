@@ -1,6 +1,6 @@
 function repeat(str,n){
-    count = 0
-    res = ""
+    let count = 0
+    let res = ""
     while(count < n){
         res = res + str
         // console.log("test")
@@ -9,7 +9,7 @@ function repeat(str,n){
 return res
 }
 
-// console.log(repeat("string|", 2));
+console.log(repeat('a', 3));
 
 // const str = "string "
 // console.log(`this is an test of how many should be reapeted =>${str.repeat(2)}`);
