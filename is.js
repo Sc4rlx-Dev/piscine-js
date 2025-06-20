@@ -39,9 +39,9 @@ is.def = (value) => typeof value !== 'undefined';
 is.arr = (value) => Array.isArray(value);
 is.obj = (value) => typeof value === 'object' && value !== null && !Array.isArray(value);
 is.fun = (value) => typeof value === 'function';
-// is.truthy = (value) => !!value;
-// is.falsy = (value) => !value;
-is.truthy = (value) => !(value === false || value == 0 || value == '' || value == null || is.undef(value) === true || is.nan(value) === true);
-is.falsy = (value) => !is.truthy(value);
+is.truthy = (value) => !!value;
+is.falsy = (value) => !value;
+// is.truthy = (value) => !(value === false || value == 0 || value == '' || value == null || is.undef(value) === true || is.nan(value) === true);
+// is.falsy = (value) => !is.truthy(value);
 
 // console.log(is.num(454));
