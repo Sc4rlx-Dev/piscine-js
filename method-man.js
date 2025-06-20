@@ -12,11 +12,13 @@ function yell(str){
 }
 
 function whisper(str){
-    return "*" + str.toLowwerCase() +"*"
+    return "*" + str.toLowerCase() +"*"
 }
 
 function capitalize(str) {
     return yell(str[0]) + str.slice(1).toLowerCase();
 }
+
+// console.log(whisper("tset"));
 
 // console.log(sentence(["test", "nono"]));
