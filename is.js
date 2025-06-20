@@ -12,9 +12,11 @@
 //     falsy : (value) => { return (!is.truthy(value))} ,
 // };
 
-// const is = {};
+const is = {};
 
-is.num = (value) => { let res = !isNaN(value); return res };
+// is.num = (value) => { let res = !isNaN(value); return res };
+is.num = (value) => { let res = typeof value === 'number' && !isNaN(value); return res };
+
 is.nan = (value) => { let res = isNaN(value); return res };
 is.str = (value) => { return typeof (value) === 'string' ? true : false; };
 is.bool = (value) => { let res = typeof (value) === 'boolean'; return res };
