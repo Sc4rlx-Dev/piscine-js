@@ -5,7 +5,7 @@
 
 
 function slice(arr, start, n) {
-    temp = arr.length
+    let temp = arr.length
     if (start < 0) {
         start = temp - (- start) 
             // console.log(start) 
