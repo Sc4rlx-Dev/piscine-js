@@ -28,7 +28,7 @@ return -1
 //console.log("Test1 :", lastIndexOf([1,2,3,4], 3))
 
 
-function include(arr ,v){
+function includes(arr ,v){
 
 	for(let i = 0; i <= arr.length; i++ ){
 		if (v === arr[i]){
@@ -39,5 +39,5 @@ return false
 }
 
 
-console.log("test :", include(["a" ," b" ," c"]," s"))
+//console.log("test :", includes(["a" ," b" ," c"]," s"))
 
