@@ -14,25 +14,25 @@ return -1
 
 
 function lastIndexOf(arr, l , indexX){
-    let index = indexX || 0 ;
+    let index = indexX || arr.length ;
     if (index < 0 ) {
         index = arr.length + index
     }
-    if ( index >= arr.length || index < 0) {return -1}
+    if ( index > arr.length || index < 0) {return -1}
 
-	let i = arr.length
-		while(i >= 0) {
+	let i = index
+		while(i  >= 0) {
 			if (arr[i] === l){
 				return i
 			}	
 		i--		
 		}
-//console.log("i :", i)
+// console.log("i :", i)
 return -1
 }
 
 
-//console.log("Test1 :", lastIndexOf([1,2,3,4], 3))
+console.log("Test10 :", lastIndexOf(['t', 0, 0, 't'], 't', 2))
 
 
 function includes(arr ,v){
