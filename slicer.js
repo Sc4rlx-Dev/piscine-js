@@ -5,12 +5,22 @@
 
 
 function slice(arr, start, n) {
-    let temp = arr.length
-    if (start < 0) {
-        start = temp - (- start) 
-            // console.log(start) 
-    }
 
+    let temp = arr.length
+    let newEnd = 0
+
+
+
+    if (start < 0) {
+        newEnd = temp - (-start) 
+    } else if (n < 0) {
+        n = temp -(-n)
+    }
+// console.log(n)
+
+    if (start < 0 && n === undefined ) {
+        start = newEnd
+    }
 
     if (typeof arr === 'string') {
         let end = n || arr.length;
@@ -34,6 +44,6 @@ function slice(arr, start, n) {
 }
 
 
-console.log(slice('abcdef', -2)); 
+console.log(slice('abcdef', 0 ,-2)); 
 // console.log(slice(['a', 'b', 'c', 'd', 'e', 'f'], 2)); 
 // console.log(slice(["hello", "world", "js", "scarlx"], 3)); 
