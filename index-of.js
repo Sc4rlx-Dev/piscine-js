@@ -1,6 +1,8 @@
-function indexOf(arr , c) {
-
-	for (let i = 0; i < arr.length ; i++){
+function indexOf(arr , c , isindex) {
+    let index = isindex || 0;
+    if (index < 0) { index = arr.length + index;}
+    if (index >= arr.length || index < 0) { return -1;}
+	for (let i = index; i < arr.length ; i++){
 		if (arr[i] === c){
 			return i	
 		}	
