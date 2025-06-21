@@ -6,21 +6,27 @@
 
 function slice(arr, start, n) {
     if (typeof arr === 'string') {
-        arr = arr.split('');
+        let end = n || arr.length;
+        let newStr = '';
+
+        for (let i = start; i < end; i++) {
+            newStr += arr[i];
+        }
+
+        return newStr;
+    } else if (Array.isArray(arr)) {
+        let end = n || arr.length;
+        let newArr = [];
+
+        for (let i = start; i < end; i++) {
+            newArr.push(arr[i]);
+        }
+
+        return newArr;
     }
-
-    let end = n || arr.length;
-    let newArr = [];
-
-    for (let i = start; i < end; i++) {
-        newArr.push(arr[i]);
-    }
-
-    return arr ? newArr : newArr;
 }
 
-const animals = ['a', 'b', 'c', 'd', 'e', 'f'];
-// console.log(animals.slice(2));
 
 // console.log(slice('abcdef', 2)); 
-// console.log("Test :" ,  slice(["hello", "world","js","scarlx"] , 3));
+// console.log(slice(['a', 'b', 'c', 'd', 'e', 'f'], 2)); 
+// console.log(slice(["hello", "world", "js", "scarlx"], 3)); 
