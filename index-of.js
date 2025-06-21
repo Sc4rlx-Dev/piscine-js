@@ -13,7 +13,13 @@ return -1
 //console.log("Test1 :", indexOf([1,2,3,4], 5))
 
 
-function lastIndexOf(arr, l){
+function lastIndexOf(arr, l , indexX){
+    let index = indexX || 0 ;
+    if (index < 0 ) {
+        index = arr.length + index
+    }
+    if ( index >= arr.length || index < 0) {return -1}
+
 	let i = arr.length
 		while(i >= 0) {
 			if (arr[i] === l){
@@ -21,7 +27,6 @@ function lastIndexOf(arr, l){
 			}	
 		i--		
 		}
-		
 //console.log("i :", i)
 return -1
 }
