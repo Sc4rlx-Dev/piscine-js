@@ -28,6 +28,10 @@ function keepLast(str){
 
 function keepFirstLast(str)
 {
+    if (str.length <= 2) {
+        return str
+    }
+
     let res = ""
 
     res = keepFirst(str)
@@ -37,7 +41,7 @@ function keepFirstLast(str)
 
 return res
 }
-// console.log(keepFirstLast("ABsasasCD"));
+console.log(keepFirstLast("A"));
 
 // console.log(keepFirst("OOasasas"));
 
