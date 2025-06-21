@@ -15,7 +15,6 @@ return cut
 }
 
 function keepFirst(str){
-    len = str.length
     let res = str.slice(0,2)
 return res
 }
