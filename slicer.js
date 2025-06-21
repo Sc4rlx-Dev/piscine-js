@@ -15,13 +15,19 @@ function slice(arr, start, n) {
         newEnd = temp - (-start) 
     } else if (n < 0) {
         n = temp -(-n)
+    } 
+    
+    if ((start < 0) &&( n < 0)) {
+        start = start * (-1)
+        n = temp + n
+        
     }
-// console.log(n)
 
     if (start < 0 && n === undefined ) {
         start = newEnd
     }
-
+// console.log(n)
+// console.log(start)
     if (typeof arr === 'string') {
         let end = n || arr.length;
         let newStr = '';
@@ -38,12 +44,11 @@ function slice(arr, start, n) {
         for (let i = start; i < end; i++) {
             newArr.push(arr[i]);
         }
-
         return newArr;
     }
 }
 
 
-console.log(slice('abcdef', 0 ,-2)); 
+console.log(slice('abcdef', -3, -1)); 
 // console.log(slice(['a', 'b', 'c', 'd', 'e', 'f'], 2)); 
 // console.log(slice(["hello", "world", "js", "scarlx"], 3)); 
