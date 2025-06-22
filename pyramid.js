@@ -14,5 +14,5 @@ function pyramid(c, h) {
         lines.push(spaces + chars);
     }
 
-    return lines;
+    return lines.join('\n');
 }
