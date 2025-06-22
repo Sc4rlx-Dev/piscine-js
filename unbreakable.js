@@ -2,6 +2,14 @@ function split(str, c) {
     let arr = []
     let strArr = ""
     let del = c.length
+
+    if (c === "") {
+        for (let i = 0; i < str.length; i++) {
+            arr.push(str[i])
+        }
+        return arr
+    }
+
     for (let i = 0; i < str.length; i++) {
         if (str.slice(i, i + del) === c) {
             arr.push(strArr)
@@ -16,11 +24,11 @@ function split(str, c) {
 }
 
 // str = "ggg - ddd - b"
-// console.log(split('ggg - ddd - b', ' - '));
-// console.log(str.split(' - '))
+// console.log(split(str, ''))
+// console.log(str.split(''))
 
 // console.log(str.split('\t'))
-// console.log( split(str , '\t'));
+// console.log( split(str , '\t'))
 
 
 function join(arr , c){
