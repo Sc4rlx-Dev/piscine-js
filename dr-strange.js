@@ -15,7 +15,8 @@ function addWeek(date) {
         12: 'secondSaturday',
         13: 'secondSunday',
     };
-    let def = ((Date.parse(date) - 978307180000) / 86400000) % 14
+    let startdat = new Date('0001-01-01')
+    let def = ((date - startdat) / 86400000) % 14
     return days[def]
 }
 
@@ -26,7 +27,7 @@ function timeTravel({ date, hour, minute, second }) {
     return date;
 }
 
-console.log(addWeek(new Date('0001-01-01')) === 'Monday')
+
 
 
 // console.log(addWeek(new Date('0001-01-01')) === 'Monday')
