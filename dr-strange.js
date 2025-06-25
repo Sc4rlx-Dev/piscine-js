@@ -1,28 +1,23 @@
-function addWeek(date){
+function addWeek(date) {
     let days = {
-        0  : 'Monday',
-        1  : 'Tuesday',
-        2  : 'Wednesday',
-        3  : 'Thursday',
-        4  : 'Friday',
-        5  : 'Saturday',
-        6  : 'Sunday',
-        7  : 'secondMonday',
-        8  : 'secondTuesday',
-        9  : 'secondWednesday',
-        10 : 'secondThursday',
-        11 : 'secondFriday',
-        12 : 'secondSaturday',
-        13 : 'secondSunday',
+        0: 'Monday',
+        1: 'Tuesday',
+        2: 'Wednesday',
+        3: 'Thursday',
+        4: 'Friday',
+        5: 'Saturday',
+        6: 'Sunday',
+        7: 'secondMonday',
+        8: 'secondTuesday',
+        9: 'secondWednesday',
+        10: 'secondThursday',
+        11: 'secondFriday',
+        12: 'secondSaturday',
+        13: 'secondSunday',
     };
-    let change = date
-    let def =  (Date.parse(change) - 978307180000 ) / 86400000 
-    if (def > 13) {
-        def = def % 14
-    }
-    // console.log(typeof(String(days)))
-return String(days[def])
-} 
+    let def = ((Date.parse(date) - 978307180000) / 86400000) % 14
+    return days[def]
+}
 
 function timeTravel({ date, hour, minute, second }) {
     date.setHours(hour);
@@ -30,6 +25,8 @@ function timeTravel({ date, hour, minute, second }) {
     date.setSeconds(second);
     return date;
 }
+
+console.log(addWeek(new Date('0001-01-01')) === 'Monday')
 
 
 // console.log(addWeek(new Date('0001-01-01')) === 'Monday')
