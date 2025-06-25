@@ -20,7 +20,8 @@ function addWeek(date){
     if (def > 13) {
         def = def % 14
     }
-return days[def]
+    // console.log(typeof(String(days)))
+return String(days[def])
 } 
 
 function timeTravel({ date, hour, minute, second }) {
@@ -32,7 +33,7 @@ function timeTravel({ date, hour, minute, second }) {
 
 
 // console.log(addWeek(new Date('0001-01-01')) === 'Monday')
-//console.log(addWeek(new Date('0001-01-01')))
+// console.log(addWeek(new Date('0001-01-01')))
 // console.log(timeTravel({
 //   date: new Date('2020-05-29 23:25:22'),
 //   hour: 21,
