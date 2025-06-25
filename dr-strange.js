@@ -1,19 +1,19 @@
 function addWeek(date){
     let days = {
-        0  : "Monday",
-        1  : "Tuesday",
-        2  : "Wednesday",
-        3  : "Thursday",
-        4  : "Friday",
-        5  : "Saturday",
-        6  : "Sunday",
-        7  : "secondMonday",
-        8  : "secondTuesday",
-        9  : "secondWednesday",
-        10 : "secondThursday",
-        11 : "secondFriday",
-        12 : "secondSaturday",
-        13 : "secondSunday",
+        0  : 'Monday',
+        1  : 'Tuesday',
+        2  : 'Wednesday',
+        3  : 'Thursday',
+        4  : 'Friday',
+        5  : 'Saturday',
+        6  : 'Sunday',
+        7  : 'secondMonday',
+        8  : 'secondTuesday',
+        9  : 'secondWednesday',
+        10 : 'secondThursday',
+        11 : 'secondFriday',
+        12 : 'secondSaturday',
+        13 : 'secondSunday',
     };
     let change = date
     let def =  (Date.parse(change) - 978307180000 ) / 86400000 
@@ -30,6 +30,9 @@ function timeTravel({ date, hour, minute, second }) {
     return date;
 }
 
+
+// console.log(addWeek(new Date('0001-01-01')) === 'Monday')
+//console.log(addWeek(new Date('0001-01-01')))
 // console.log(timeTravel({
 //   date: new Date('2020-05-29 23:25:22'),
 //   hour: 21,
