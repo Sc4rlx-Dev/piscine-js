@@ -11,8 +11,12 @@ return false
 }
 
 function isAfter(date1 , date2){
-    return Date.parse(date1) > Date.parse(date2) 
+    if(Date.parse(date1) > Date.parse(date2) ){
+        return true
+    }
+return false
 }
+
 function isBefore(date1 , date2){
     if(Date.parse(date1) < Date.parse(date2) ){
         return true
@@ -21,21 +25,24 @@ return false
 }
 
 function isFuture(datee){
-    if (isValid(datee) && isAfter(datee , Date.now()))   {
-        return true
+    let v = datee - new Date()
+    if (v < 0) {
+        return false
     }
-return false
+return true
 }
 
 function isPast(datee){
-    if(isValid(datee) && isBefore(datee , Date.now() )){
-        return true
+    let v = datee - new Date()
+    if (v > 0) {
+        return false
     }
-return false
+return true
 }
 
 // console.log(Date.now())
-console.log(isValid(new Date('1995-12-17T03:24:00').getTime()))
+// console.log(isValid(new Date('1995-12-17T03:24:00').getTime()))
+console.log(isFuture(new Date(2077, 11, 31)))
 // console.log(isValid(new Date(NaN)))
 // var result = isFuture(new Date(2014, 11, 31))
 // console.log(result)
