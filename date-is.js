@@ -27,22 +27,23 @@ return false
 function isFuture(datee){
     let v = datee - new Date()
     if (v < 0) {
-        return !isNaN(datee)
+        return false
     }
-return !isNaN(datee)
+return true
 }
 
 function isPast(datee){
     let v = datee - new Date()
     if (v > 0) {
-        return !isNaN(datee)
+        return false
     }
-return !isNaN(datee)
+return true
 }
 
 // console.log(Date.now())
 // console.log(isValid(new Date('1995-12-17T03:24:00').getTime()))
 console.log(isFuture(new Date(2077, 11, 31)))
+console.log(isFuture(''))
 // console.log(isValid(new Date(NaN)))
 // var result = isFuture(new Date(2014, 11, 31))
 // console.log(result)
