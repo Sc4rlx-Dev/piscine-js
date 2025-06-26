@@ -27,17 +27,17 @@ return false
 function isFuture(datee){
     let v = datee - new Date()
     if (v < 0) {
-        return false
+        return !isNaN(datee)
     }
-return true
+return !isNaN(datee)
 }
 
 function isPast(datee){
     let v = datee - new Date()
     if (v > 0) {
-        return false
+        return !isNaN(datee)
     }
-return true
+return !isNaN(datee)
 }
 
 // console.log(Date.now())
