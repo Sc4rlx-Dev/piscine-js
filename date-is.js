@@ -1,12 +1,9 @@
 function isValid(datee){
-    // datee = 1233
-    if (Date.now() == datee) {
+    // console.log(datee)
+    if (datee instanceof Date && !isNaN(datee.getTime())) {
         return true
     }
-    if((datee instanceof Date ) && !isNaN(datee) ){
-        return true
-    }
-return false
+    return false
 }
 
 function isAfter(date1 , date2){
@@ -34,6 +31,7 @@ return false
 }
 
 // console.log(Date.now())
-// console.log(isValid(Date.now()))
+console.log(isValid(Date.now()))
+// console.log(isValid(new Date('1995-12-17T03:24:00').getTime()))
 // var result = isFuture(new Date(2014, 11, 31))
 // console.log(result)
