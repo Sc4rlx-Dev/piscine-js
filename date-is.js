@@ -29,7 +29,7 @@ function isFuture(datee){
     if (v < 0) {
         return false
     }
-return !isNaN(datee.getTime())
+return !isNaN(datee)
 }
 
 function isPast(datee){
@@ -37,7 +37,7 @@ function isPast(datee){
     if (v > 0) {
         return false
     }
-return !isNaN(datee.getTime())
+return !isNaN(datee)
 }
 
 // console.log(Date.now())
