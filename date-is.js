@@ -1,9 +1,8 @@
 function isValid(datee){
-
-    if(!(datee instanceof Date) && !isNaN(datee) ){
-        return false
+    if((datee instanceof Date )&& !isNaN(datee) ){
+        return true
     }
-return true
+return false
 }
 
 
@@ -32,5 +31,6 @@ return false
 }
 
 
+// console.log(isValid(new Date('foo')))
 // var result = isFuture(new Date(2014, 11, 31))
 // console.log(result)
