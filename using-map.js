@@ -16,12 +16,20 @@ function upperCasingStates(arr) {
   return arr.map(s => s.replace(/\b\w/g, char => char.toUpperCase()));
 }
 
-console.log(upperCasingStates(['alabama', 'new jersey']));
+// console.log(upperCasingStates(['alabama', 'new jersey']));
+
+
 
 function fahrenheitToCelsius(arr2){
-const degree = arr2.map((c) => (c - 32 )/ 1.8 )
-return degree
+  const degree = arr2.map((c) => {
+    const parsedTemp = parseFloat(c)
+    return Math.round((parsedTemp - 32) / 1.8) + '°C'
+  });
+  return degree;
 }
+
+console.log(
+fahrenheitToCelsius(['68°F', '59°F', '25°F'])) // -> ['20°C', '15°C', '-4°C']
 
 
 
