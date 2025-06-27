@@ -12,10 +12,8 @@ function citiesOnly(arr) {
   return arr.map(item => item.city);
 }
 
-function upperCasingStates(arr){
-
-const mapp = arr.map((t) => t[0].toUpperCase() + t.slice(1).toLowerCase());
-return mapp
+function upperCasingStates(arr) {
+  return arr.map(s => s.replace(/\b\w/g, char => char.toUpperCase()));
 }
 
 console.log(upperCasingStates(['alabama', 'new jersey']));
