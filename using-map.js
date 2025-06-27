@@ -8,7 +8,9 @@
 //     temperature: ' 84 ° F   ',
 //   },
 // ]) // -> ['Los Angeles', 'San Francisco']
-
+function citiesOnly(arr) {
+  return arr.map(item => item.city);
+}
 
 function upperCasingStates(arr){
 const mapp = arr.map((t) => t[0].toUpperCase() + t.slice(1).toLowerCase());
