@@ -13,11 +13,12 @@ function citiesOnly(arr) {
 }
 
 function upperCasingStates(arr){
+
 const mapp = arr.map((t) => t[0].toUpperCase() + t.slice(1).toLowerCase());
 return mapp
 }
 
-// console.log(upperCasingStates(['alabama', 'new jersey']));
+console.log(upperCasingStates(['alabama', 'new jersey']));
 
 function fahrenheitToCelsius(arr2){
 const degree = arr2.map((c) => (c - 32 )/ 1.8 )
@@ -56,13 +57,13 @@ return res.map(i => `${i.temperature} in ${i.city}, ${i.state}`);
 }
 
 
-console.log(
-  tempForecasts([
-    {
-      city: 'Pasadena',
-      temperature: ' 101 °F',
-      state: 'california',
-      region: 'West',
-    },
-  ])
-); // -> ['38°Celsius in Pasadena, California']
+// console.log(
+//   tempForecasts([
+//     {
+//       city: 'Pasadena',
+//       temperature: ' 101 °F',
+//       state: 'california',
+//       region: 'West',
+//     },
+//   ])
+// ); // -> ['38°Celsius in Pasadena, California']
