@@ -28,8 +28,5 @@ return check.length == check2.length
     // return gtx.test(str) && rtx.test(str)
 }
  
-
-
-
 console.log(
 sameAmount("string", /h/, /w/))
