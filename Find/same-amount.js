@@ -9,11 +9,11 @@ let cart_graphic2 = new RegExp(rtx, 'g')
  
     // res = gtx.test(str)
 let check =  str.match(cart_graphic) 
+let check2 =  str.match(cart_graphic2) 
 if ( check == null) {
 
     check = []
 }
-let check2 =  str.match(cart_graphic2) 
 if ( check2 == null) {
 
     check2 = []
@@ -31,5 +31,5 @@ return check.length == check2.length
 
 
 
-// console.log(
-// sameAmount("string", /h/, /w/))
+console.log(
+sameAmount("string", /h/, /w/))

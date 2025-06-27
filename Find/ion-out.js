@@ -9,4 +9,4 @@ function ionOut(str) {
     return arr
 }
 
-// console.log(ionOut('1st position is the vision of the 2nd position'));
+console.log(ionOut('1st position is the vision of the 2nd position'));
