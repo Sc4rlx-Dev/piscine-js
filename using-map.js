@@ -21,11 +21,10 @@ function upperCasingStates(arr) {
 
 
 function fahrenheitToCelsius(arr2){
-  const degree = arr2.map((c) => {
-    const parsedTemp = parseFloat(c)
-    return Math.round((parsedTemp - 32) / 1.8) + '°C'
-  });
-  return degree;
+  const degree = arr2.map((c) => { const t = parseFloat(c.replace('°F', '').trim())
+    return Math.round((t - 32) / 1.8) + '°C'
+  })
+  return degree
 }
 
 console.log(
