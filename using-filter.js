@@ -3,27 +3,20 @@ function filterShortStateName(arr){
 return res
 }
 
-const words = ["spray", "elite", "exuberant", "destruction", "present", "abc"]
-// console.log(filterShortStateName(words))
-
-
-//  a, e, i, o, u
-
-
 function filterStartVowel(arr2){
     const res2 = arr2.filter((f) => f.match(/^[aeiou]/i))
 return res2
 }
 
-console.log(filterStartVowel(words))
-
 function filter5Vowels(arr3){
     const res3 = arr3.filter((w) => {
         let v = w.match(/[aeiou]/ig)
-        return v && new Set(v).size === 5
+        return v && new Set(v).size >= 5
     })
     return res3
 }
+// console.log(filter5Vowels(["asdv","sadf","dsggh","aeuioff","aeuioffoou"]));
+
 
 function filter1DistinctVowel(arr4){
     const res4 = arr4.filter((d) => {
@@ -42,8 +35,5 @@ function multiFilter(arr5){
     }))
 return res5
 }
-
-
-// console.log(filter1DistinctVowel(["abc","efg","hgs","abb","abbebbibbobbubb"]))
 
 
