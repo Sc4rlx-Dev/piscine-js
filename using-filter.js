@@ -24,13 +24,13 @@ function filter1DistinctVowel(arr4){
         if (!m){
             return false        
         }
-    const res = new Set(m.map(m => m.toLowerCase()))
-    return res && new Set(m).size === 1   
+    const res = new Set(m.map(vo => vo.toLowerCase()))
+    return res.size === 1   
     })
 return res4
 }
 
-// console.log(filter1DistinctVowel(["asdv","sadf","dsggh","aeuioff","aeuioffoou"]))
+console.log(filter1DistinctVowel(["asdv","sadf","dsggh","aeuioff","aeuioffoou"]))
 
 
 function multiFilter(arr5){
