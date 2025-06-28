@@ -19,42 +19,66 @@
 // console.log(result);
 // // Expected output: Array ["exuberant", "destruction", "present"]
 
+// const array = [15, 16, 17, 18, 19];
+
+// function reducer(accumulator, currentValue, index) {
+//   const returns = accumulator + currentValue;
+//   console.log(
+//     `accumulator: ${accumulator}, currentValue: ${currentValue}, index: ${index}, returns: ${returns}`,
+//   );
+//   return returns;
+// }
+
+// array.reduce(reducer);
 
 
-function filter5Vowels(arr3){
-    function check(arr){
-        var f1 = false
-        var f2 = false
-        var f3 = false
-        var f4 = false
-        var f5 = false
-        for(let i = 0 ; i <= arr.length ;i++) {
-            for(let j = 0 ; j <= arr[i].length ; j++){
-                if(arr[i][j] == 'a'){ f1 = true }
-                if(arr[i][j] == 'e'){ f2 = true }
-                if(arr[i][j] == 'i'){ f3 = true }
-                if(arr[i][j] == 'o'){ f4 = true }
-                if(arr[i][j] == 'u'){ f5 = true }
-            }
-        }
+// const array1 = [1, 2, 3, 4]
+// // 0 + 1 + 2 + 3 + 4
+// const i = 0;
+// const s = array1.reduce(
+//   (a , c) => a + c
+
+// )
+
+// console.log(s)
+// Expected output: 10
+
+
+
+// function filter5Vowels(arr3){
+//     function check(arr){
+//         var f1 = false
+//         var f2 = false
+//         var f3 = false
+//         var f4 = false
+//         var f5 = false
+//         for(let i = 0 ; i <= arr.length ;i++) {
+//             for(let j = 0 ; j <= arr[i].length ; j++){
+//                 if(arr[i][j] == 'a'){ f1 = true }
+//                 if(arr[i][j] == 'e'){ f2 = true }
+//                 if(arr[i][j] == 'i'){ f3 = true }
+//                 if(arr[i][j] == 'o'){ f4 = true }
+//                 if(arr[i][j] == 'u'){ f5 = true }
+//             }
+//         }
  
-    return false
-    }
+//     return false
+//     }
 
-    const res3 = arr3.filter((w) => {
-        let res
-        for (let i = 0 ; i <= w.length ; i++){
-            if (check(w) == true){
-                res.push(w[i])
-            } else (
-                i++
-            )
-        }
-    return res
-    })
+//     const res3 = arr3.filter((w) => {
+//         let res
+//         for (let i = 0 ; i <= w.length ; i++){
+//             if (check(w) == true){
+//                 res.push(w[i])
+//             } else (
+//                 i++
+//             )
+//         }
+//     return res
+//     })
         
-return res3
-}
+// return res3
+// }
 
 
 
