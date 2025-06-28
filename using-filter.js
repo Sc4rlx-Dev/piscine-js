@@ -21,10 +21,17 @@ function filter5Vowels(arr3){
 function filter1DistinctVowel(arr4){
     const res4 = arr4.filter((d) => {
         let m = d.match(/[aeiou]/ig)
-    return m && new Set(m).size === 1   
+        if (!m){
+            return false        
+        }
+    const res = new Set(m.map(m => m.toLowerCase()))
+    return res && new Set(m).size === 1   
     })
 return res4
 }
+
+// console.log(filter1DistinctVowel(["asdv","sadf","dsggh","aeuioff","aeuioffoou"]))
+
 
 function multiFilter(arr5){
     const res5 = arr5.filter(m => ({
