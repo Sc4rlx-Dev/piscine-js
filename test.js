@@ -178,3 +178,20 @@
 
 // console.log(map1);
 // Expected output: Array [2, 8, 18, 32]
+
+
+// const isBelowThreshold = (currentValue) => currentValue <= 39;
+
+// const array1 = [1, 30, 39, 29, 10, 13];
+
+// console.log(array1.every(isBelowThreshold));
+// // Expected output: true
+
+
+// const array = [1, 2, 3, 4, 5];
+
+// // Checks whether an element is even
+// const even = (element) => element % 2 === 0;
+
+// console.log(array.some(even));
+// // Expected output: true
