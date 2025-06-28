@@ -30,16 +30,17 @@ function filter1DistinctVowel(arr4){
 return res4
 }
 
-console.log(filter1DistinctVowel(["asdv","sadf","dsggh","aeuioff","aeuioffoou"]))
+// console.log(filter1DistinctVowel(["asdv","sadf","dsggh","aeuioff","aeuioffoou"]))
 
 
 function multiFilter(arr5){
-    const res5 = arr5.filter(m => ({
-        capital : m.capital >= 8 ,
-        name :    !filterStartVowel([m.name]),
-        tag :     [m.tag].match(/[aeiou]/g),
-        region :   m.region !== 'south',
-    }))
+    const res5 = arr5.filter(m  => {
+        const c = m.capital.length >= 8 
+        const n = !/^[aeiou]/i.test(m.name)
+        const t = /[aeiou]/i.test(m.tag)
+        const r = m.region.toLowerCase() != "south"
+    return c && n && t && r
+    })
 return res5
 }
 
