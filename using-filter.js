@@ -11,7 +11,7 @@ return res2
 function filter5Vowels(arr3){
     const res3 = arr3.filter((w) => {
         let v = w.match(/[aeiou]/ig)
-        return v && new Set(v).size >= 5
+        return v && v.length >= 5
     })
     return res3
 }
