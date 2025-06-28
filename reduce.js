@@ -40,4 +40,4 @@ return res
 
 
 
-console.log(reduceRight([1,2,3] ,  (accumulator, currentValue) => accumulator + currentValue))
+// console.log(reduceRight([1,2,3] ,  (accumulator, currentValue) => accumulator + currentValue))
