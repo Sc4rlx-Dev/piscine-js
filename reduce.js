@@ -31,7 +31,7 @@ function reduceRight(arr , func){
     }
     let res = arr[arr.length - 1] 
 
-    for (let i = arr.length - 2 ; i >= 0 ; i++){
+    for (let i = arr.length - 2 ; i >= 0 ; i--){
         res = func(res , arr[i])        
     }   
 return res
@@ -40,4 +40,4 @@ return res
 
 
 
-// console.log(reduce([1,2,3] ,  (accumulator, currentValue) => accumulator + currentValue))
+console.log(reduceRight([1,2,3] ,  (accumulator, currentValue) => accumulator + currentValue))
