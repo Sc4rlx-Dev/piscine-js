@@ -1,3 +1,69 @@
+// const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+
+// function test(arr) {
+//   let res
+//   for (let i = 0 ; i < arr.length ; i++){
+//     for(let j = 0; j < arr[i].length ; j++){
+//       if(arr[i][j] == 's'){
+//         res = arr[i]
+//       }
+//     }
+//   }  
+// return res
+// }
+
+// // console.log(test(["abc","def","ghs"]))
+// const result = words.filter(test);
+
+// console.log(result);
+// // Expected output: Array ["exuberant", "destruction", "present"]
+
+
+
+function filter5Vowels(arr3){
+    function check(arr){
+        var f1 = false
+        var f2 = false
+        var f3 = false
+        var f4 = false
+        var f5 = false
+        for(let i = 0 ; i <= arr.length ;i++) {
+            for(let j = 0 ; j <= arr[i].length ; j++){
+                if(arr[i][j] == 'a'){ f1 = true }
+                if(arr[i][j] == 'e'){ f2 = true }
+                if(arr[i][j] == 'i'){ f3 = true }
+                if(arr[i][j] == 'o'){ f4 = true }
+                if(arr[i][j] == 'u'){ f5 = true }
+            }
+        }
+ 
+    return false
+    }
+
+    const res3 = arr3.filter((w) => {
+        let res
+        for (let i = 0 ; i <= w.length ; i++){
+            if (check(w) == true){
+                res.push(w[i])
+            } else (
+                i++
+            )
+        }
+    return res
+    })
+        
+return res3
+}
+
+
+
+
+
+
+
+
+
 // console.log(new Date().toString()); // "Sat Sep 13 275760 00:00:00 GMT+0000 (Coordinated Universal Time)"
 
 // console.log(new Date().)
@@ -11,25 +77,25 @@
 
 // console.log(map1.keys(0));
 
-function trimTemp(arr){
+// function trimTemp(arr){
 
-    const res = arr.map( i => ({
-        city        : i.city , 
-        temperature : i.temperature.trim().replaceAll(' ', '') ,
-    }) )
+//     const res = arr.map( i => ({
+//         city        : i.city , 
+//         temperature : i.temperature.trim().replaceAll(' ', '') ,
+//     }) )
 
-return res
+// return res
 
-}
+// }
 
 
-console.log(
-trimTemp(
-[
-  { city: 'Los Angeles', temperature: '  101 °F   ' },
-  { city: 'San Francisco', temperature: ' 84 ° F   ' },
-]) 
-)
+// console.log(
+// trimTemp(
+// [
+//   { city: 'Los Angeles', temperature: '  101 °F   ' },
+//   { city: 'San Francisco', temperature: ' 84 ° F   ' },
+// ]) 
+// )
 
 
 
