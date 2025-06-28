@@ -3,7 +3,7 @@ function filterShortStateName(arr){
 return res
 }
 
-// const words = ["spray", "elite", "exuberant", "destruction", "present", "abc"]
+const words = ["spray", "elite", "exuberant", "destruction", "present", "abc"]
 // console.log(filterShortStateName(words))
 
 
@@ -11,11 +11,11 @@ return res
 
 
 function filterStartVowel(arr2){
-    const res2 = arr2.filter((f) => f.match(/^[aeiou]/g))
+    const res2 = arr2.filter((f) => f.match(/^[aeiou]/i))
 return res2
 }
 
-// console.log(filterStartVowel(words))
+console.log(filterStartVowel(words))
 
 function filter5Vowels(arr3){
     const res3 = arr3.filter((w) => {
@@ -38,7 +38,7 @@ function multiFilter(arr5){
         capital : m.capital >= 8 ,
         name :    !filterStartVowel([m.name]),
         tag :     [m.tag].match(/[aeiou]/g),
-        region :   m.region != "south",
+        region :   m.region !== 'south',
     }))
 return res5
 }
