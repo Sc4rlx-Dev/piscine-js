@@ -34,7 +34,7 @@ function fahrenheitToCelsius(arr2){
 
 function trimTemp(arr){
     const res = arr.map( i => ({
-        city        : i.city , 
+        ...i ,
         temperature : i.temperature.trim().replaceAll(' ', '') ,
     }) )
 
@@ -42,13 +42,13 @@ return res
 
 }
 
-// console.log(
-// trimTemp(
-// [
-//   { city: 'Los Angeles', temperature: '  101 °F   ' },
-//   { city: 'San Francisco', temperature: ' 84 ° F   ' },
-// ]) 
-// )
+console.log(
+trimTemp(
+[
+  { city: 'Los Angeles', temperature: '  101 °F   ' },
+  { city: 'San Francisco', temperature: ' 84 ° F   ' },
+]) 
+)
 
 
 function tempForecasts (arr4){
