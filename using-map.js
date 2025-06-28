@@ -22,13 +22,13 @@ function upperCasingStates(arr) {
 
 function fahrenheitToCelsius(arr2){
   const degree = arr2.map((c) => { const t = parseFloat(c.replace('°F', '').trim())
-    return Math.round((t - 32) / 1.8) + '°C'
+    return Math.floor((t - 32) / 1.8) + '°C'
   })
   return degree
 }
 
-console.log(
-fahrenheitToCelsius(['68°F', '59°F', '25°F'])) // -> ['20°C', '15°C', '-4°C']
+// console.log(
+// fahrenheitToCelsius([' 101 °F']))
 
 
 
@@ -54,7 +54,7 @@ return res
 function tempForecasts (arr4){
 const res = arr4.map(i => ({
   city: upperCasingStates([i.city]),
-  temperature: Math.round(fahrenheitToCelsius([parseInt(i.temperature)])) + '°Celsius',
+  temperature: fahrenheitToCelsius([i.temperature])[0].replaceAll('C' , 'Celsius'),
   state: upperCasingStates([i.state]),
   region: i.region,
 }));
