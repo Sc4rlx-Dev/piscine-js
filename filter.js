@@ -23,7 +23,7 @@ return res
 
 function partition(arr, fucn){
     let res = filter(arr , fucn)
-    let res2 = filter(arr , fucn)
+    let res2 = reject(arr , fucn)
 return [res , res2]
 }
 
