@@ -1,3 +1,59 @@
+
+
+
+
+
+export const getArchitects = () => {
+    const n = Array.from(document.getElementsByTagName('a'))
+    const t = Array.from(document.getElementsByTagName('span'))
+return ([n , t])
+}
+
+
+
+export const getClassical = () => {
+    const c = Array.from(document.getElementsByClassName("classical"))
+    const nc = Array.from(document.querySelectorAll('div.classe:not(.classical)'))
+return ([c , nc])
+}
+
+export const getActive = () => {
+return ([ , ])
+}
+
+export const getBonannoPisano = () => {
+
+return ([ , ])
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const words = ["spray", "elite", "exuberant", "destruction", "present"];
 
 
