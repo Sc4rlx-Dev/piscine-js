@@ -11,17 +11,17 @@ export const pimp = () => {
         btn.classList.remove("unpimp")
         btn.classList.add(styles[i])
         i++
-        if(i == len) {
+        if(i === len) {
             flag = false
         }
     } else{
+        i--
         btn.classList.remove(styles[i])
         btn.classList.add("unpimp")
-        i--
 
-        if(i == 0) {
-        btn.classList.remove("unpimp")
-        flag = true
+        if(i === 0) {
+            btn.classList.remove("unpimp")
+            flag = true
         }
     }
 }
