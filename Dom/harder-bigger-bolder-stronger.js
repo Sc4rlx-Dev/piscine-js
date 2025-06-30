@@ -4,7 +4,7 @@ export const generateLetters = () => {
     const buf = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     const len = buf.length
 
-     while(i <= 120){
+     while(i < 120){
 
         const nwdiv = document.createElement("div")
         document.body.append(nwdiv)
