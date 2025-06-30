@@ -8,12 +8,12 @@ export const build = (n) => {
         const brick = document.createElement("div")
         brick.id = `brick-${id}`
 
-        if (id  % 3 === 2) {
+        if (id % 3 === 2) {
             brick.dataset.foundation = true
         }
         document.body.appendChild(brick)
         id++
-    },)
+    },100)
 }
 
 export const repair = (...ids) => {
@@ -21,7 +21,7 @@ export const repair = (...ids) => {
         const bid = document.getElementById(ids[i])
         if(!bid){return}
         if( bid.dataset.foundation == "true"){
-            
+
             bid.dataset.repaired = "in progress"
         } else {
             bid.dataset.repaired = "true"
