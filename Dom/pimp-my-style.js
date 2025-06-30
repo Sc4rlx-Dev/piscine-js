@@ -9,19 +9,21 @@ export const pimp = () => {
 
     if(flag) {
         btn.classList.remove("unpimp")
+        if (styles[i] === "fifteen") {
+            btn.classList.add("unpimp")
+        }
         btn.classList.add(styles[i])
         i++
-        if(i == len) {
+        if(i === len) {            
             flag = false
         }
-    } else{
+    } else {
+        i--
         btn.classList.remove(styles[i])
         btn.classList.add("unpimp")
-        i--
-
-        if(i == 0) {
-        btn.classList.remove("unpimp")
-        flag = true
+        if(i === 0) {
+            btn.classList.remove("unpimp")
+            flag = true
         }
     }
 }
