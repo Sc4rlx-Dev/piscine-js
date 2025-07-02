@@ -8,7 +8,7 @@ export const getArchitects = () => {
     const t = Array.from(document.getElementsByTagName('span'))
 return ([n , t])
 }
-
+b.arr = [...a.arr, ...b.arr]
 
 
 export const getClassical = () => {
