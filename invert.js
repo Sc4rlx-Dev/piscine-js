@@ -1,10 +1,15 @@
 export const invert = (obj) => {
-    return new Object(obj)
+    let res = {}
+    for (let key in obj) {
+        res[obj[key]] = key
+    }
+    return res
 }
 
 
 
 
 
-console.log(invert({foo : 'jjjj'}))
+// console.log(invert({foo : 'jjjj'}))
+console.log(invert({ language: 'english' }))
 
