@@ -1,8 +1,8 @@
 export const invert = (obj) => {
     let res = {}
-    for (let key in obj) {
-        res[obj[key]] = key
-    }
+    Object.entries(obj).forEach(([Key, value]) => {
+        res[value] = Key
+    })
     return res
 }
 
@@ -12,4 +12,5 @@ export const invert = (obj) => {
 
 // console.log(invert({foo : 'jjjj'}))
 console.log(invert({ language: 'english' }))
+console.log(invert({ f: 5, __proto__: { d: 6 } }), { 5: 'f' })
 
