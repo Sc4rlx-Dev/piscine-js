@@ -1,23 +1,23 @@
 export const pick = (obj, str) => {
-    let newobj = {}
-    if (typeof str !== 'string') {
+    if (typeof str === 'string') {
         str = [str]
     }
+    let newobj = {}
 
     Object.entries(obj).forEach(([key, value]) => {
         if (str.includes(key)) {
             newobj[key] = value;
         }
-    });
+    })
     return newobj
 }
 
 export const omit = (obj, str) => {
-    let newobj = {};
-
-    if (typeof str !== 'string') {
+    
+    if (typeof str === 'string') {
         str = [str]
     }
+    let newobj = {}
 
     Object.entries(obj).forEach(([key, value]) => {
         if (!str.includes(key)) {
@@ -29,7 +29,14 @@ export const omit = (obj, str) => {
 
 
 
-const obj = { a: 1, b: 2, c: 3 }
-const str = 'a'
+// const obj = { a: 1, b: 2, c: 3 }
+// const str = 'a'
 
-console.log(omit(obj, str))
+// console.log(omit(obj, str))
+
+
+// const obj = { a: 1, b: 2, c: 3 }
+// console.log(omit(obj, 'a'))        
+// console.log(omit(obj, ['a','b'])) 
+// console.log(pick(obj, 'a'))       
+// console.log(pick(obj, ['a','b']))  
