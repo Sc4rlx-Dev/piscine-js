@@ -20,15 +20,16 @@ export const mapValues = (obj2 , func) => {
 return res
 }
 
-export const reduceValues = (obj3 , func) => {
-    let res = 0
+export const reduceValues = (obj3 , func , i) => {
+    if(typeof i === 'undefined'){ i = 0 }
+    let res = i
     for(const [, v] of Object.entries(obj3)){
         res = func(res ,v ) 
     }
 return res
 }
 
-
+// reduceValues({ a: 1, b: 2, c: 3 }, (acc, cr) => acc + cr, 3) === 9
 // console.log(Object.entries(nutrients).filter(([k, v]) => v <= 12))
 // console.log(Object.entries(nutrients).map(([k, v]) => v + 1))
 // console.log(Object.entries(nutrients).reduce((a, [k, v]) => a + v, 0))
@@ -42,6 +43,7 @@ return res
 // output: { carbohydrates: 13, protein: 21, fat: 6 }
 
 // console.log(reduceValues(nutrients, (acc, cr) => acc + cr))
+// console.log(reduceValues({ a: 1, b: 2, c: 3 }, (acc, cr) => acc + cr , 3))
 // output: 37
 
 
