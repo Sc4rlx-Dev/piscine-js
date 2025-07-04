@@ -98,7 +98,7 @@ export const cartTotal = (cart) => {
       ([namenut, valn]) => {
         const calcvalue = valn * m
         // console.log(calcvalue)
-        return [namenut, +calcvalue.toFixed(2)]
+        return [namenut, +calcvalue.toFixed(3)]
       }
     )
     return [name, calcnut]
