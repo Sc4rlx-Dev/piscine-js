@@ -1,6 +1,5 @@
 const replica = (...objects) => {
     const res = {}
-
     for (const obj of objects) {
         if (typeof obj !== 'object' || obj === null) {continue}
 
@@ -8,7 +7,7 @@ const replica = (...objects) => {
             if (Object.prototype.hasOwnProperty.call(obj, key)) {
                 const value = obj[key]
                 const rv = res[key]
-                if (typeof value === 'object' && value !== null && !Array.isArray(value) ) {
+                if (typeof value === 'object' && value !== null && !Array.isArray(value)  && !(value instanceof RegExp)) {
                     if (typeof rv === 'object' && rv !== null && !Array.isArray(rv)) {
                         res[key] = replica(rv, value)
                     } else { res[key] = replica(value) }
@@ -19,6 +18,8 @@ const replica = (...objects) => {
     return res
 }
 
+// console.log(
+// replica({ con: console.log }, { reg: /hello/ }))
 
 // console.log(replica(
 //     { a: 1, b: { c: 2 } },
