@@ -23,12 +23,14 @@ const countPronouns = (str) => {
 }
 
 
+const ex = 'Using Array Destructuring, you you can iterate through objects easily.'
+console.log(
+countPronouns(ex)
+)
+// { you: { word: [ 'can' ], count: 2 } }
+// const ex = 'If he you want to buy something you have to pay.'
 
-// Test the countPronouns function
-// const testString = "I saw you and he said she likes it. They went to the park, and we enjoyed the day."
-// console.log(countPronouns(testString))
-//     pronoun(`Your reducer function's returned value is assigned to the accumulator,
-// whose value is remembered across each iteration throughout the array and
-// ultimately becomes the final, single resulting value.`),
-//     {}
-  
+// {
+//   he: { word: [], count: 1}
+//   you: { word: [ 'want', 'have' ], count: 2 }
+// }
