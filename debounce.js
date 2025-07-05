@@ -6,9 +6,21 @@ export const debounce = (fn, timeout) => {
     }
 }
 
-export const opDebounce = debounce(()=> log('saved'))
+export const opDebounce = (fn, timeout, { ld = false } = {}) => {
+    let isld = ld
+    
+    const d = debounce((...args) => {
+        if (!ld) {
+            fn.apply(this, args)
+        }
+        isld = ld
+    }, timeout)
 
-// function log(i){
-//     console.log(i)
-// }
-
+    return (...args) => {
+        if (isld) {
+            fn.apply(this, args)
+            isld = false
+        }
+        d(...args)
+    }
+}
