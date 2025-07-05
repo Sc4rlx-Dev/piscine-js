@@ -4,7 +4,7 @@ const countPronouns = (str) => {
     const words = str.match(/\b\w+\b/g) || []
 
     for (let i = 0; i < words.length; i++) {
-        const currentWord = words[i]
+        const currentWord = words[i].toLowerCase()
 
         if (pronouns.has(currentWord)) {
             if (!res[currentWord]) {
@@ -25,5 +25,10 @@ const countPronouns = (str) => {
 
 
 // Test the countPronouns function
-const testString = "I saw you and he said she likes it. They went to the park, and we enjoyed the day."
-console.log(countPronouns(testString))
+// const testString = "I saw you and he said she likes it. They went to the park, and we enjoyed the day."
+// console.log(countPronouns(testString))
+//     pronoun(`Your reducer function's returned value is assigned to the accumulator,
+// whose value is remembered across each iteration throughout the array and
+// ultimately becomes the final, single resulting value.`),
+//     {}
+  
