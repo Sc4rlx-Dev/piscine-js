@@ -1,4 +1,4 @@
-const countPronouns = (str) => {
+const Pronouns = (str) => {
     const res = {}
     const pronouns = new Set(["i", "you", "he", "she", "it", "they", "we"])
     const words = str.match(/\b\w+\b/g) || []
@@ -25,7 +25,7 @@ const countPronouns = (str) => {
 
 const ex = 'Using Array Destructuring, you you can iterate through objects easily.'
 console.log(
-countPronouns(ex)
+Pronouns(ex)
 )
 // { you: { word: [ 'can' ], count: 2 } }
 // const ex = 'If he you want to buy something you have to pay.'
