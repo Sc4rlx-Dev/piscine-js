@@ -1,0 +1,91 @@
+/* layout relevant styles */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    display: grid;
+    height: 100%;
+    grid-template-columns: auto 33% auto;
+    grid-template-rows: auto auto auto;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/* other styles */
+.card {
+    padding: 50px;
+    color: #fff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    background: rgb(0,174,239);
+    background: linear-gradient(135deg, rgba(0,174,239,1) 20%, rgba(45,56,138,1) 100%);
+}
+
+.card h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.card input {
+    width: auto;
+    height: 50px;
+    border-radius: 25px;
+    border: 0;
+    line-height: 50px;
+    padding: 0 20px;
+    font-size: 1.5rem;
+    font-family: Roboto, sans-serif;
+    outline: none;
+}
+
+.card button {
+    width: 240px;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid #fff;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+    position: relative;
+    box-sizing: border-box;
+    justify-self: center;
+    background: transparent;
+    cursor: pointer;
+    font-family: Roboto, sans-serif;
+    outline: none;
+}
+
+.card button:hover {
+    background: #ffffff;
+    color: #000;
+}
+
+.card button::after {
+    content: ">";
+    font-family: "Jua";
+    position: absolute;
+    right: 15px;
+    transition: right 1s ease;
+}
+
+.card button:hover::after {
+    right: 10px;
+}
+
+a, a:hover {
+    transition: all 0.3s ease;
+}
