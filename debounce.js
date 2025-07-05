@@ -6,21 +6,18 @@ export const debounce = (fn, timeout) => {
     }
 }
 
-export const opDebounce = (fn, timeout, { ld = false } = {}) => {
-    let isld = ld
-    
-    const d = debounce((...args) => {
-        if (!ld) {
-            fn.apply(this, args)
-        }
-        isld = ld
-    }, timeout)
+export const opDebounce = (fn, timeout, { leading = false } = {}) => {
+    let timer
+    let ldcal = leading
 
     return (...args) => {
-        if (isld) {
-            fn.apply(this, args)
-            isld = false
-        }
-        d(...args)
+        if (leading && ldcal) { fn.apply(this, args) ; ldcal = false }
+
+        clearTimeout(timer)
+
+        timer = setTimeout(() => {
+            if (!leading) { fn.apply(this, args) }
+            ldcal = leading
+        }, timeout)
     }
 }
