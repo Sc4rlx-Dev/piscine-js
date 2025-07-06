@@ -10,7 +10,7 @@ export const throttle = (fn, delay) => {
     }
 }
 
-export const opThrottle = (func, delay, options = {leading: true, trailing: false}) => {    
+export const opThrottle = (func, delay, options = {}) => {    
     let timer = null, last = null, trargs = null
     return function (...args) {
         if(timer) { last = this ; trargs = args ; return }
