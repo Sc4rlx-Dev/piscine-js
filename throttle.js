@@ -1,40 +1,26 @@
-export const throttle = (fn , tm )=> {
-let timer 
-return (...args) => {
-    if(timer !== undefined){ return }
-
-    timer = setTimeout(() => {
-        timer = undefined
-    },tm)
-    return fn(...args)
+export const throttle = (fn, delay) => {
+    let coldwn = false
+    return (...args) => {
+        if (coldwn) return
+        fn(...args)
+        coldwn = true
+        setTimeout(() => {
+            coldwn = false
+        }, delay)
     }
 }
 
-export const opThrottle = (fn , tm , {ld = false  , tr = true} = {}) => {
-    let timer 
-    let larg 
-
-    const throttled = (...args) => {
-        if(timer) {
-            larg = args
-            return
+export const opThrottle = (func, delay, options = {leading: true, trailing: false}) => {    
+    let timer = null, last = null, trargs = null
+    return function (...args) {
+        if(timer) { last = this ; trargs = args ; return }
+        if(options.leading){ func.call(this, ...args) } else { last = this
+            trargs = args}
+        const coldwn = () => {
+            if(options.trailing && trargs) { func.call(last, ...trargs) ; last = null ; trargs = null
+                timer = setTimeout(coldwn, delay)
+            } else { timer = null }
         }
-        if(ld){
-            fn.apply(this , args)
-        } else {
-            larg = args
-        }
-
-        const timecall = () => {
-            if (tr && larg) {
-                fn.apply(this , larg)
-                larg = null
-            }
-            timer = null
-        }
-
-        timer = setTimeout(timecall , tm)
+    timer = setTimeout(coldwn, delay)
     }
-return throttled
 }
-

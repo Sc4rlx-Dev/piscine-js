@@ -1,34 +1,40 @@
 
 
+const fn = () => console.log('Called!');
+const debounced = opDebounce(fn, 1000, { leading: true });
 
-
-
-export const getArchitects = () => {
-    const n = Array.from(document.getElementsByTagName('a'))
-    const t = Array.from(document.getElementsByTagName('span'))
-return ([n , t])
-}
-b.arr = [...a.arr, ...b.arr]
-
-
-export const getClassical = () => {
-    const c = Array.from(document.getElementsByClassName("classical"))
-    const nc = Array.from(document.querySelectorAll('div.classe:not(.classical)'))
-return ([c , nc])
-}
-
-export const getActive = () => {
-return ([ , ])
-}
-
-export const getBonannoPisano = () => {
-
-return ([ , ])
-}
+debounced();  // Called immediately
+debounced();  // Ignored, because inside timeout
+// After 1 second, next call will be allowed again
 
 
 
 
+
+
+
+// export const getArchitects = () => {
+//     const n = Array.from(document.getElementsByTagName('a'))    
+//     const t = Array.from(document.getElementsByTagName('span'))
+// return ([n , t])
+// }
+// b.arr = [...a.arr, ...b.arr]
+
+
+// export const getClassical = () => {
+//     const c = Array.from(document.getElementsByClassName("classical"))    
+//     const nc = Array.from(document.querySelectorAll('div.classe:not(.classical)'))
+// return ([c , nc])
+// }
+
+// export const getActive = () => {
+// return ([ , ])    
+// }
+
+// export const getBonannoPisano = () => {
+
+// return ([ , ])    
+// }
 
 
 
