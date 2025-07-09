@@ -7,10 +7,11 @@ function Disco(word) {
     return s + f
 }
 
-if (!input) { console.log("🕺🏼") ; process.exit(1) }
+if (!input) {
+    console.log("🕺🏼")
+    process.exit(1)
+}
 
 const words = input.split(" ")
 const result = words.map(Disco).join(" ")
 console.log(result)
-
-if (input.toLowerCase() === "discovery") { console.log("🕺🏼") }
