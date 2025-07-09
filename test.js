@@ -1,11 +1,19 @@
+const { argv } = require('node:process');
+const http = require('http');
+var args = process.argv;
+console.log(http);
 
+// print process.argv
+argv.forEach((val, index) => {
+  console.log(`${index}: ${val}`);
+})
 
-const fn = () => console.log('Called!');
-const debounced = opDebounce(fn, 1000, { leading: true });
+// const fn = () => console.log('Called!');
+// const debounced = opDebounce(fn, 1000, { leading: true });
 
-debounced();  // Called immediately
-debounced();  // Ignored, because inside timeout
-// After 1 second, next call will be allowed again
+// debounced();  // Called immediately
+// debounced();  // Ignored, because inside timeout
+// // After 1 second, next call will be allowed again
 
 
 
